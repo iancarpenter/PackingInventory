@@ -23,14 +23,14 @@
         
         public bool Add(InventoryItem item)
         {
-            if (CurrentCount > MaxCount) return false;
-            if (CurrentWeight + item.Weight > MaxWeight) return false;
+            if (CurrentCount >= MaxCount) return false;            
             if (CurrentVolume + item.Volume > MaxVolume) return false;
+            if (CurrentWeight + item.Weight > MaxWeight) return false;
 
             _items[CurrentCount] = item;
             CurrentCount++;
-            CurrentVolume = item.Volume;
-            CurrentWeight = item.Weight;
+            CurrentVolume += item.Volume;
+            CurrentWeight += item.Weight;
 
             return true;
         }
