@@ -12,6 +12,8 @@ namespace PackingInventory
             {
                 Console.WriteLine($"Pack is current at {pack.CurrentCount}/{pack.MaxCount} items, {pack.CurrentWeight}/{pack.MaxWeight} weight, and {pack.CurrentVolume}/{pack.MaxVolume} volume.");
 
+                Console.WriteLine($"The Pack {pack.ToString()}");
+
                 Console.WriteLine("What do you want to add?");
                 Console.WriteLine("1 - Arrow");
                 Console.WriteLine("2 - Bow");

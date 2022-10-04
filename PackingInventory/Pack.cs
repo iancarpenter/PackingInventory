@@ -20,7 +20,19 @@
 
             _items = new InventoryItem[maxCount];
         }
-        
+
+        public override string ToString()
+        {
+            string contents = "contains ";
+
+            if (CurrentCount == 0) contents += "Nothing";
+
+            for (int itemNumber = 0; itemNumber < CurrentCount; itemNumber++)
+                contents += _items[itemNumber].ToString() + " ";
+
+            return contents;
+        }
+
         public bool Add(InventoryItem item)
         {
             if (CurrentCount >= MaxCount) return false;            
