@@ -5,5 +5,9 @@
         public Rope() : base (1, 1.5f)
         {
         }
+        public override string ToString()
+        {
+            return "Rope";
+        }
     }
 }

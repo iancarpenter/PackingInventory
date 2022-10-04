@@ -32,6 +32,7 @@ namespace PackingInventory
                     6 => new Sword()                    
                 };
 
+                Console.WriteLine($"{newItem.ToString()}");
                 if (!pack.Add(newItem))
                     Console.WriteLine("Could not add this to the pack.");
             }
